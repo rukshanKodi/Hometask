@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <title>Assign Task</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <h2>Assign Task</h2>
+    <form action="/tasks/assign" method="post" id="assignTaskForm">
+        <div>
+            <label for="taskId">Task:</label>
+            <select name="taskId" id="taskId">
+                <option value="" disabled selected>Select a task</option>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+        <div>
+            <label for="memberId">Household Member:</label>
+            <select name="memberId" id="memberId">
+                <option value="" disabled selected>Select a member</option>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+        <input type="submit" value="Assign Task" />
+    </form>
+
+    <!-- Link the separate JavaScript file -->
+    <script src="assignTask.js"></script>
+</body>
+
+</html>
